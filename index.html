@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla Vicente - Ing. Civil Industrial</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>⚡ Malla Curricular de Vicente ⚡</h1>
+    <div id="mensaje-informativo" class="mensaje-informativo"></div>
+    
+    <div class="contenedor-malla">
+        <!-- Nivel 1 -->
+        <div class="semestre">
+            <h2>1º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="mat">Introducción a las Matemáticas</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="fund-ges">Fundamentos de Gestión</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="tec-ges">Tecnologías para la Gestión</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="intro-ing">Introducción a la Ingeniería</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="elec-des">Electivo de Desarrollo del Pensamiento</div>
+        </div>
+
+        <!-- Nivel 2 -->
+        <div class="semestre">
+            <h2>2º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="alg" data-requisitos="mat">Álgebra</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="quim" data-requisitos="mat">Química y Medio Ambiente</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="calc1" data-requisitos="mat">Cálculo I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="prog" data-requisitos="tec-ges">Programación</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="elec-com1">Electivo de Comunicación</div>
+        </div>
+
+        <!-- Nivel 3 -->
+        <div class="semestre">
+            <h2>3º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="alg-lin" data-requisitos="alg">Álgebra Lineal</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="prob-est" data-requisitos="alg">Probabilidad y Estadística</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="fis-mec" data-requisitos="calc1">Física Mecánica</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="calc2" data-requisitos="calc1">Cálculo II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="prog-avz" data-requisitos="prog">Programación Avanzada</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="elec-com2">Electivo de Comunicación</div>
+        </div>
+
+        <!-- Nivel 4 -->
+        <div class="semestre">
+            <h2>4º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="taller-ind" data-requisitos="prob-est">Taller de Aplicación Industrial</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="cien-mat" data-requisitos="fis-mec">Ciencia y Res. de Materiales</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="calc3" data-requisitos="calc2">Cálculo III</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="teo-org" data-requisitos="fund-ges">Teoría Organizacional</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ing-tec1">Inglés Técnico</div>
+        </div>
+
+        <!-- Nivel 5 -->
+        <div class="semestre">
+            <h2>5º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="optimizacion" data-requisitos="alg-lin,calc3">Optimización</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="inf-est" data-requisitos="prob-est">Inferencia Estadística</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="contabilidad" data-requisitos="teo-org">Contabilidad y Costos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="mec-fluidos" data-requisitos="cien-mat">Mecánica de Fluidos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ecuaciones" data-requisitos="calc3">Ecuaciones Diferenciales</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ing-tec2" data-requisitos="ing-tec1">Inglés Técnico II</div>
+        </div>
+
+        <!-- Nivel 6 -->
+        <div class="semestre">
+            <h2>6º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="inv-operativa" data-requisitos="optimizacion">Investigación Operativa</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="microecon" data-requisitos="contabilidad">Microeconomía</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="termodinamica" data-requisitos="mec-fluidos">Termodinámica</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="electromagnetismo" data-requisitos="fis-mec,calc2">Elec. y Electromagnetismo</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="elec-personal">Electivo Desarrollo Personal</div>
+        </div>
+
+        <!-- Nivel 7 -->
+        <div class="semestre">
+            <h2>7º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="gest-op1" data-requisitos="inv-operativa">Gestión de Operaciones I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="macroecon" data-requisitos="microecon">Macroeconomía</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ing-econ" data-requisitos="contabilidad">Ingeniería Económica</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="electronica" data-requisitos="electromagnetismo">Electrónica y Electrotecnia</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="esp1" data-requisitos="prog-avz">Especialidad I</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ing-tec3" data-requisitos="ing-tec2">Inglés Técnico III</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="practica1">Práctica I</div>
+        </div>
+
+        <!-- Nivel 8 -->
+        <div class="semestre">
+            <h2>8º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="gest-op2" data-requisitos="gest-op1">Gestión de Operaciones II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="consultoria" data-requisitos="gest-op1">Consultoría de Empresas</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="gest-estrat" data-requisitos="macroecon">Gestión Estratégica</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="finanzas" data-requisitos="ing-econ">Finanzas</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ecommerce" data-requisitos="esp1">E-Commerce and Business</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="ing-tec4" data-requisitos="ing-tec3">Inglés Técnico IV</div>
+        </div>
+
+        <!-- Nivel 9 -->
+        <div class="semestre">
+            <h2>9º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="proc-ind" data-requisitos="termodinamica">Procesos Industriales</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="innovacion" data-requisitos="gest-estrat">Innovación y Emprendimiento</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="form-eval" data-requisitos="finanzas">Formulación y Eval. de Proyectos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="econ-reg" data-requisitos="macroecon">Economía y Desarrollo Regional</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="esp2" data-requisitos="esp1">Especialidad II</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="elec-etica">Electivo de Ética</div>
+        </div>
+
+        <!-- Nivel 10 -->
+        <div class="semestre">
+            <h2>10º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="simulacion" data-requisitos="proc-ind">Simulación de Procesos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="marketing" data-requisitos="innovacion">Marketing</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="admin-proy" data-requisitos="form-eval">Admin. y Dirección de Proyectos</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="plan-negocios" data-requisitos="form-eval">Plan de Negocios</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="der-empresa">Derecho de Empresa y Ambiental</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="elec-social">Electivo de Responsabilidad Social</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="practica2" data-requisitos="practica1">Práctica II</div>
+        </div>
+
+        <!-- Nivel 11 -->
+        <div class="semestre">
+            <h2>11º Nivel</h2>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="esp3" data-requisitos="esp2">Especialidad III</div>
+            <div class="ramo" onclick="toggleAprobado(this)" data-id="trabajo-titulo" data-requisitos="simulacion,admin-proy,practica2">Trabajo de Título</div>
+        </div>
+    </div>
+    
+    <p class="footer-frase">
+        "KIZAZO NETO"
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
