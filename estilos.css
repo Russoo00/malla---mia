@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Fondo azul estilo aura de energía / mar abierto */
+    background: linear-gradient(135deg, #091221, #0f2a4a, #164275);
+    background-attachment: fixed;
+    color: #e0e6ed;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #ff9800; /* Naranja shonen */
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.contenedor-malla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.semestre {
+    background: rgba(10, 25, 47, 0.85); /* Azul oscuro semitransparente */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.semestre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.semestre h2 {
+    text-align: center;
+    color: #64ffda; /* Cyan tecnológico / chakra */
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 22px;
+    border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+    padding-bottom: 5px;
+}
+
+.ramo {
+    position: relative;
+    background: #112240;
+    color: #ccd6f6;
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-left: 5px solid #007bff; /* Azul base */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ramo:hover {
+    background: #1d3557;
+    border-left-color: #64ffda;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+    transform: scale(1.04);
+}
+
+/* --- ESTILOS PARA RAMOS APROBADOS (Modo Super Saiyan / Kyubi) --- */
+.aprobado {
+    text-decoration: line-through;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    border-left-color: #ffd54f; 
+    color: #111;
+    font-weight: 900;
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+    animation: burst 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.aprobado:hover {
+    background: linear-gradient(90deg, #ffb74d, #ff7043);
+    box-shadow: 0 0 25px rgba(255, 152, 0, 0.8);
+}
+
+/* --- ESTILOS PARA RAMOS BLOQUEADOS --- */
+.ramo.bloqueado {
+    background-color: #0b132b;
+    border-left-color: #333;
+    color: #555;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.ramo.bloqueado:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: #0b132b;
+    border-left-color: #333;
+}
+
+@keyframes burst {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.1); filter: brightness(1.5); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* Mensaje del sistema */
+.mensaje-informativo {
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    pointer-events: none;
+    user-select: none;
+    min-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateY(-10px);
+}
+
+.mensaje-informativo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mensaje-informativo.felicitacion {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+}
+
+.mensaje-informativo.error {
+    background: linear-gradient(90deg, #e53935, #b71c1c);
+    box-shadow: 0 0 20px rgba(229, 57, 53, 0.5);
+}
+
+.footer-frase {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    color: #ff9800;
+    font-size: 28px;
+    user-select: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
