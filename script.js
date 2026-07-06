@@ -22,7 +22,7 @@ function toggleAprobado(element) {
 
 function mostrarFelicitacion() {
     // Mensaje con temática Shonen/Poder
-    mensajeInformativo.textContent = "🔥 ¡Poder al máximo! Ramo superado. 🔥";
+    mensajeInformativo.textContent = "🔥 ENFASIS 🔥";
     mensajeInformativo.className = 'mensaje-informativo visible felicitacion'; 
 
     if (timeoutId) clearTimeout(timeoutId);
