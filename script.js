@@ -2,7 +2,6 @@ const mensajeInformativo = document.getElementById('mensaje-informativo');
 let timeoutId = null;
 
 function toggleAprobado(element) {
-    // 1. Revisa si el ramo está bloqueado
     if (element.classList.contains('bloqueado')) {
         mostrarMensajeBloqueado(element);
         return; 
@@ -16,13 +15,11 @@ function toggleAprobado(element) {
         animacionPop(element);
     }
 
-    // 2. Actualiza el estado de todos los ramos y luego guarda
     actualizarEstadoRamos();
 }
 
 function mostrarFelicitacion() {
-    // Mensaje con temática Shonen/Poder
-    mensajeInformativo.textContent = "🔥 ENFASIS 🔥";
+    mensajeInformativo.textContent = "ENFASIS KL NETO";
     mensajeInformativo.className = 'mensaje-informativo visible felicitacion'; 
 
     if (timeoutId) clearTimeout(timeoutId);
@@ -94,7 +91,6 @@ function guardarEstado() {
         id: div.dataset.id,
         aprobado: div.classList.contains('aprobado')
     }));
-    // Nueva llave de almacenamiento específica para ti
     localStorage.setItem('estadoRamosVicente', JSON.stringify(estados));
 }
 
